@@ -13,7 +13,7 @@ jobs:
       - run: docker build -t devd1st/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true devd1st/react-test npm test
 
-      - run: docker build -tdevd1st/multi-client ./client
+      - run: docker build -t devd1st/multi-client ./client
       - run: docker build -t devd1st/multi-nginx ./nginx
       - run: docker build -t devd1st/multi-server ./server
       - run: docker build -t devd1st/multi-worker ./worker
